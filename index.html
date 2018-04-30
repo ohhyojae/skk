@@ -1,0 +1,98 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<script src="scrollByAnimated.js"></script>
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		body{ background:black;}
+		header {width:960px; height:44px; position: fixed;left:calc(50% - 480px);z-index: 9999;}
+		header #logo {float:left;  width:100px;height:44px;line-height: 44px;text-align: center;color:black;font-size: 0.8em;font-weight:400;}
+		header #menu {float:right; width:600px;}
+		header #menu li{float:left; width:65px; height: 44px; line-height:22px;text-align:left;color:black;font-size: 0.8em;font-weight:400;cursor:pointer;}
+		header #menu li:hover{background: #f92b2b}
+		section,footer{width:960px; height:600px; margin:0 auto;position: relative}
+		section h2{color:white; font-size: 3em; font-weight:100; position: absolute;line-height: 1.2}
+		section p{color:white; font-size: 1em; font-weight:100; position: absolute;line-height: 1.5;width:550px;}
+		footer h2{color:white; font-size: 3em; line-height: 600px;}
+		svg {position: fixed;z-index: 9999}
+		section svg{position: absolute;}
+		#s1{background:url('001.jpg');width:560px; height:319px;}
+		#s1 h2{left:400px; top:200px;}
+		
+		#s2{background:url('002.jpg');width:560px; height:428px;}
+		#s2 h2{left:200px; top:200px;}
+		#s2 p{left:200px; top:280px;}
+		#s2 svg{left:400px; top:330px;}
+		
+		#s3{background:url('003.jpg');width:560px; height:399px;}
+		#s3 h2{left:100px; top:300px;}
+		#s3 p{left:100px; top:380px;}
+		
+		#s4{background:url('004.jpg');width:560px; height:369px;}
+		#s4 h2{left:400px; top:200px;}
+		
+		#s5{background:url('005.jpg');width:560px; height:458px;}
+		#s5 h2{left:50px; top:300px;}
+		#s5 p{left:50px; top:380px;}
+		
+		#s6{background:url('006.jpg');width:560px; height:428px;}
+		#s6 h2{left:350px; top:100px;}
+		#s6 p{left:350px; top:180px;}
+		
+	</style>
+</head>
+<body>
+	
+	<header>
+		
+		<ul id="menu">
+			<li id="m1">menu1</li>
+			<li id="m2">menu2</li>
+			<li id="m3">menu3</li>
+			<li id="m4">menu4</li>
+			<li id="m5">menu5</li>
+			<li id="m6">menu6</li>
+		</ul>
+	</header>
+	<section id="s1">
+		<h2></h2>
+	</section>
+	<section id="s2">
+		<h2></h2>
+		<p></p>
+		
+	</section>
+	<section id="s3">
+		<h2></h2>
+		<p>d</p>
+	</section>
+	<section id="s4">
+		<h2></h2>
+	</section>
+	<section id="s5">
+		<h2>원</h2>
+		<p></p>
+	</section>
+	<section id="s6">
+		<h2></h2>
+		<p></p>
+	</section>
+	
+	
+	<script>
+		window.onload = function(){window.scrollTo(0,0);}
+		
+		m1.onclick = function(){ aniScroll(0); }
+		m2.onclick = function(){ aniScroll(600); }
+		m3.onclick = function(){ aniScroll(1200); }
+		m4.onclick = function(){ aniScroll(1800); }
+		m5.onclick = function(){ aniScroll(2400); }
+		m6.onclick = function(){ aniScroll(3000); }
+		function aniScroll(destination){
+			var distance = destination - document.body.scrollTop;
+			scrollByAnimated(distance, 250);
+		}
+	</script>
+</body>
